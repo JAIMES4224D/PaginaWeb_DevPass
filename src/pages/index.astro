@@ -3,8 +3,9 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/card.astro';
 
-const profilePicture = '/public/fotoP.png'; // Tu foto personal
-const logoBrand = '/public/logo_devpass.jpg'; // Tu logo de DevPass
+const baseUrl = import.meta.env.BASE_URL;
+const profilePicture = `${baseUrl}fotoP.png`;
+const logoBrand = `${baseUrl}logo_devpass.png`;
 ---
 <Layout 
   title="DevPass | Transforma tu código en arte digital" 
