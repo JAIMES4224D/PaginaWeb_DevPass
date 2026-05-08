@@ -1,0 +1,29 @@
+/* src/styles/global.css */
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-blue: #00c2ff;
+  --color-cyber-dark: #020617;
+  --color-cyber-dark-secondary: #090e1a; /* Un tono ligeramente más claro para las tarjetas */
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-dark text-slate-200 antialiased min-h-screen overflow-x-hidden;
+    /* El fondo técnico y el resplandor ahora se manejan en GlowBackground.astro */
+  }
+}
+
+@layer components {
+  .cyber-border {
+    @apply bg-slate-900/40 backdrop-blur-md border border-slate-800/50 rounded-2xl transition-all duration-300;
+  }
+  .cyber-border:hover {
+    @apply border-cyber-blue/50 shadow-[0_0_25px_rgba(0,194,255,0.15)] bg-slate-900/60;
+    transform: translateY(-2px);
+  }
+
+  .cyber-text-glow {
+    text-shadow: 0 0 15px rgba(0, 194, 255, 0.3);
+  }
+}
